@@ -1,8 +1,11 @@
 module.exports = {
-  entry: './modules/main.js',
+  entry: { home:'./modules/Home.js',
+          about: './modules/About.js'
+},
   output: {
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
+  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -18,3 +21,4 @@ module.exports = {
     ]
   }
 };
+
